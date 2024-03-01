@@ -28,3 +28,8 @@ jobs:
         run: |
           cd ciphers_project
           python manage.py test
+      - name: Build and push the image
+        run: |
+          docker login --username chanothy --password ${{secrets.ACCESS_TOKEN}} ghcr.io
+          docker build -t ghcr.io/chanothy/ciphers-service:latest --file Dockerfile .
+          docker push ghcr.io/chanothy/ciphers-service:latest
