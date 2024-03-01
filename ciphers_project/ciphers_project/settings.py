@@ -127,6 +127,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
-    "https://chanothy.github.io/numbers-app/",
+    "https://chanothy.github.io",
     "http://localhost:3000"
 ]
